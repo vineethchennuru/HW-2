@@ -8,7 +8,14 @@ Shown are the stock closing price and volume of Google!
 
 # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
 #define the ticker symbol
-tickerSymbol = 'GOOGL'
+
+sample_stock_list = ('PHM','AOS','GM','FGEN','GOOGL')
+
+tickerSymbol = st.selectbox(
+    'How would you like to be contacted?',
+    sample_stock_list)
+
+
 #get data on this ticker
 tickerData = yf.Ticker(tickerSymbol)
 #get the historical prices for this ticker
